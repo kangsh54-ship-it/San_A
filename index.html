@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김산아 | Media Content Portfolio</title>
+    <style>
+        /* 기본 리셋 및 폰트 설정 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #050505; /* 올블랙 테마 배경 */
+            color: #eaeaea;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #888888;
+        }
+
+        /* 레이아웃 컨테이너 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 헤더 (프로필 및 소개) */
+        header {
+            padding: 120px 0 60px;
+            border-bottom: 1px solid #222;
+            margin-bottom: 60px;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        header h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #888;
+            margin-bottom: 30px;
+        }
+        .about-me {
+            max-width: 800px;
+            color: #bbb;
+            font-size: 1.1rem;
+            word-break: keep-all;
+        }
+
+        /* 포트폴리오 섹션 */
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            font-weight: 700;
+            border-left: 4px solid #fff;
+            padding-left: 15px;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-bottom: 100px;
+        }
+
+        /* 개별 프로젝트 카드 */
+        .card {
+            background-color: #111;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #555;
+        }
+        .card-content {
+            padding: 35px 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .card-description {
+            color: #999;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+        .tag-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+        .tag {
+            background-color: #222;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #ccc;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #fff;
+            color: #000;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-align: center;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #ccc;
+        }
+
+        /* 유튜브 영상 컨테이너 */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 177.77%; /* 9:16 비율 (쇼츠) */
+            background-color: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: auto;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 푸터 */
+        footer {
+            text-align: center;
+            padding: 50px 0;
+            border-top: 1px solid #222;
+            color: #555;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>김산아</h1>
+            <h2>Media Content Creator | UX·UI Planner & 3D Environment Modeler</h2>
+            <div class="about-me">
+                경성대학교 미디어콘텐츠학과에서 직관적인 서비스 기획과 매력적인 시각 디자인을 연구합니다. <br>
+                사용자의 페인포인트(Pain Point)를 예리하게 짚어내는 앱 기획부터, 디테일이 살아있는 3D 배경 및 프랍(Prop) 모델링, 그리고 트렌디한 영상 연출까지 다방면의 콘텐츠 제작 역량을 갖추고 있습니다.
+            </div>
+        </header>
+
+        <section>
+            <h2 class="section-title">Projects</h2>
+            
+            <div class="portfolio-grid">
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">MoHaji (모하지)</h3>
+                        <div class="tag-wrap">
+                            <span class="tag">UX/UI 기획</span>
+                            <span class="tag">서비스 디자인</span>
+                            <span class="tag">B2B 비즈니스</span>
+                        </div>
+                        <p class="card-description">
+                            대학생 MT 및 단체 행사를 위한 올인원 맞춤형 솔루션 기획안입니다. 대규모 인원 수용 숙소 탐색의 어려움, 예약 시스템의 파편화, 회비 정산의 불투명성 등 행사 기획자가 겪는 현실적인 스트레스를 원스톱으로 해결하는 비즈니스 모델과 UX를 설계했습니다.
+                        </p>
+                        <a href="김산아_기획안.pdf" target="_blank" class="btn">기획안 PDF 보기</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">SPARTY (스파티)</h3>
+                        <div class="tag-wrap">
+                            <span class="tag">앱 디자인</span>
+                            <span class="tag">커뮤니티 플랫폼</span>
+                            <span class="tag">와이어프레임</span>
+                        </div>
+                        <p class="card-description">
+                            2030 세대를 타겟으로 한 하이퍼로컬 스포츠 동호회 커뮤니티 앱 디자인입니다. 동호회를 찾고 가입하는 과정의 어려움을 해결하는 데 초점을 맞추어, AI 맞춤 추천과 신뢰도 기반의 매칭 시스템을 직관적인 UI/UX와 와이어프레임으로 구현했습니다.
+                        </p>
+                        <a href="김산아_스파티.pdf" target="_blank" class="btn">디자인 PDF 보기</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">Media Content & Video</h3>
+                        <div class="tag-wrap">
+                            <span class="tag">Video Production</span>
+                            <span class="tag">Shorts</span>
+                            <span class="tag">Editing</span>
+                        </div>
+                        <p class="card-description">
+                            에프터이펙트, 프리미어 프로 등 툴을 활용해 시각적 연출과 임팩트를 담아낸 영상 콘텐츠입니다.
+                        </p>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/HDQ41zCctNA" title="YouTube Shorts" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2026 Kim San-a. All rights reserved.
+    </footer>
+
+</body>
+</html>
